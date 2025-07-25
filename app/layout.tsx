@@ -2,22 +2,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Navigation from "@/components/navigation"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Ravi Kumar Yadav - AI & ML Developer",
+  title: "Lucas Wang - Senior Blockchain & Web3 Developer",
   description:
-    "Portfolio of Ravi Kumar Yadav, a 2nd-year Computer Science student specializing in Artificial Intelligence and Machine Learning",
-  keywords: ["AI", "Machine Learning", "Computer Science", "Portfolio", "Data Science", "Ravi Kumar Yadav"],
-  authors: [{ name: "Ravi Kumar Yadav" }],
-  openGraph: {
-    title: "Ravi Kumar Yadav - AI & ML Developer",
-    description: "Portfolio of Ravi Kumar Yadav, aspiring Data Scientist & AI Developer",
-    type: "website",
-  },
+    "Portfolio of Lucas Wang, Senior Blockchain & Web3 Developer with 8+ years of experience in DeFi, smart contracts, and decentralized applications.",
     generator: 'v0.dev'
 }
 
@@ -28,12 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navigation />
-          {children}
-        </ThemeProvider>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
